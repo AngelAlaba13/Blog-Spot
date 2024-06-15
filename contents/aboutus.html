@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="icon" href="imgs/icon.png">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: rgb(255, 39, 39);
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 50px;
+            z-index: 100;
+        }
+
+        #head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+
+        .main_head {
+            text-decoration: none;
+            color: white;
+            margin: 0 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        ul li {
+            position: relative;
+            margin: 0 10px;
+        }
+
+        ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #EB8588;
+            padding: 0;
+        }
+
+        ul ul li {
+            width: 100%;
+        }
+
+        ul li:hover > ul {
+            display: block;
+        }
+
+        #cover {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+
+        #my_profile {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        #content {
+            background-color: rgb(255, 213, 213);
+            padding: 50px 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        #left {
+            padding: 20px;
+            text-align: justify;
+            font-size: 20px;
+            line-height: 1.5;
+            padding-top: 100px;
+            padding-left: 100px;
+        }
+
+        #right {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 50px;
+        }
+
+        p {
+            color: rgb(48, 33, 0);
+        }
+
+        @media only screen and (max-width: 920px) {
+            #content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                
+            }
+
+            #left {
+                padding: 20px;
+                text-indent: 0;
+            }
+
+            #my_profile {
+                margin: 0 auto;
+            }
+        }
+
+        @media only screen and (max-width: 300px) {
+            #content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                
+            }
+
+            #left {
+                padding: 20px;
+                text-indent: 0;
+                padding-top: 300px;
+            }
+
+            #my_profile {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="head">
+            <a class="main_head" href="main.html">EXPLORE</a>
+            <ul>
+                <li>
+                    <a class="main_head" href="#">CATEGORIES</a>
+                    <ul>
+                        <li><a href="foods.html">FOODS</a></li>
+                        <li><a href="travel.html">TRAVEL</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a class="main_head" href="aboutus.html">ABOUT US</a>
+            <a class="main_head" href="login.html">LOG OUT</a>
+        </div>
+    </header>
+
+    <img id="cover" src="imgs/aboutUs.jpg" alt="Cover Image">
+
+    <div id="content">
+        <div id="left">
+            <p>This website aims to provide guides for people in different areas of life. Looking for step-by-step instructions for cooking? Sure, we have one ready for you. Looking for a guide to a vacation this year? We can be your partner in that. Developed by Angel Kyle L. Alaba, a second year computer science student at North Eastern Mindanao State University, she aims to provide people of any age with a more convenient and all-in-one website for all their needs. This website is in its early stages of development, so improvements are yet to be seen.</p>
+        </div>
+
+        <div id="right">
+            <img id="my_profile" src="imgs/angel.jpg" alt="Angel's Profile Picture">
+        </div>
+    </div>
+</body>
+</html>
